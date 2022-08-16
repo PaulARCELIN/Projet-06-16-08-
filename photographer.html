@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/photographers.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/222c220c92.js" crossorigin="anonymous"></script>
+    <title>Fisheye - photographe </title>
+  </head>
+
+  <body>
+    <div class="bg-image"></div>
+    <header>
+      <a href="index.html"><img src="assets/images/logo.png" class="logo" alt="Fisheye Home page"/></a>
+    </header>
+
+    <main id="main">
+      <div id="photo-header" class="photograph-header">
+      </div>
+      <div id="controls" class="menu-controls"></div>
+      <div id="gallery"></div>
+      <div id="totalLikesContainer" class="total-likes-container"></div>
+      <div id="carrousel">
+        <img src="assets/icons/close.svg" />
+      </div>
+    </main>
+
+    <div id="contact_modal" role="dialog">
+			<div class="modal">
+				<header>
+          <div> 
+            <h2>Contactez-moi</h2>
+            <h2 id="modal-user-name"></h2>
+          </div>
+          <img src="assets/icons/close.svg" onclick="closeModal()" />
+        </header>
+				<form id="form">
+					<div>
+						<label for="firstName">Prénom</label>
+            <input id="firstName"/>
+            <label for="lastName">Nom</label>
+            <input id="lastName"/>
+            <label for="email">Email</label>
+            <input id="email" />
+            <label for="message-input">Votre message</label>
+            <textarea name="message" id="message-input" cols="30" rows="10"></textarea>
+					</div>
+          <button id="submit-button" class="contact-button" aria-label="Send" onclick="submitForm(event)">Envoyer</button>
+				</form>
+			</div>
+		</div>
+    <script src="scripts/factories/menu.js"></script>
+    <script src="scripts/factories/media.js"></script>
+    <script src="scripts/factories/photographer.js"></script>
+    <script src="scripts/pages/photographer.js"></script>
+    <script src="scripts/utils/contactForm.js"></script>
+    <script src="scripts/utils/carrousel.js"></script>
+  </body>
+</html>

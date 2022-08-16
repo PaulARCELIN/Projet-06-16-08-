@@ -1,0 +1,359 @@
+body {
+    height: 100%;
+}
+
+.bg-image {
+    display: none;
+    position: absolute;
+    height: 290vh;
+    width: 100%;
+    filter: blur(8px);
+    z-index: 2;
+    background: rgba(240,240,240,0.5);
+}
+
+#contact_modal {
+    display: none;
+    z-index: 999; 
+}
+
+.photograph-header {
+    background-color: #FAFAFA;
+    height: 300px;
+    margin: 0px 100px;
+}
+
+.contact-button {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 11px;
+    width: 170px;
+    height: 70px;
+    border: none;
+    background-color: #901C1C;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background-color: #DB8876;
+    color: black;
+}
+
+.contact-button:focus {
+    background-color: #DB8876;
+    color: black;
+}
+
+.modal {
+    border-radius: 5px;
+    background-color: #DB8876;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-between;
+    padding: 35px;
+    margin: auto;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    
+}
+
+.modal header {
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 15px;
+}
+
+.modal header img {
+    cursor: pointer;
+}
+
+.modal header h2 {
+    font-size: 44px;
+    font-weight: normal;
+    margin: 0;
+    
+}
+
+.message-input {
+    height: 270px;
+    padding: 0;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form label {
+    color: #312E2E;
+    font-size: 36px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: self-start;
+    margin-bottom: 26px;
+}
+
+form input {
+    width: 100%;
+    height: 68px;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+}
+
+form textarea {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    resize: none;
+}
+
+.photograph-header h2 {
+    color: #D3573C;
+    font-size: 36px;
+    margin: 10px 0px 10px 0px;
+}
+
+#photo-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.photo-header {
+    object-fit: cover;
+}
+
+#photo-header button {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#photo-header img {
+    height: 200px;
+    width: 200px;
+    clip-path: circle(50%);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+#gallery {
+    display: flex;
+    margin: 50px 85px;
+    flex-wrap: wrap;
+}
+
+.media-container {
+    margin: 0px 15px 30px 15px;
+    width: calc(33.33% - 30px);
+}
+
+.media-container .photo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.photo-description {
+    display: flex;
+    justify-content: space-between;
+    color: #D3573C;
+}
+
+.photo-description p {
+    margin: 0;
+}
+
+.photo-likes {
+    cursor: pointer;
+}
+
+.menu-container {
+    display: inline-block;
+    position: relative;
+}
+
+.menu-button {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 20px 15px;
+    border: none;
+    background-color: #901C1C;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;   
+}
+
+.menu-button:hover {
+    background-color: #DB8876;
+    color: black;
+}
+
+.menu-button:focus {
+    background-color: #DB8876;
+    color: black;
+}
+
+.menu-button p {
+    margin: 0;
+}
+
+.menu-button i {
+    margin-left: 20px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 10px;
+    background-color: #901C1C;
+    position: absolute;
+    top: 60px;
+    color: white;
+    width: 100%;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+.menu-list li {
+    padding: 10px 7px;
+    border-bottom: solid 1px white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.menu-list li:last-child {
+    border-bottom: none;
+}
+
+.menu-list li:hover {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.menu-list li:focus {
+    background-color: #DB8876;
+    color: black;
+}
+
+.menu-controls {
+    margin: 40px 100px;
+    display: flex;
+}
+
+.control-label {
+    margin-right: 40px;
+    font-size: 18px;
+}
+
+.total-likes-container {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    font-size: 20px;
+    background-color: #D3573C;
+    border-radius: 5px;
+    position: fixed;  
+    bottom: 0px;
+    right: 0px;
+}
+
+.carrousel {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.carrousel img {
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    
+}
+
+.carrousel video {
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.carrousel-close-button {
+    color: #901C1C;
+    transform: scale(300%);
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.carrousel-next-button {
+    color: #901C1C;
+    transform: scale(300%);
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    cursor: pointer;
+}
+
+.carrousel-previous-button {
+    color: #901C1C;
+    transform: scale(300%);
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    cursor: pointer;
+}
+
+.carrousel-photo-title {
+    color: #D3573C;
+    position: absolute;
+    margin: 20px;
+    left: 170px;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.carrousel-container {
+    opacity: 1;
+    transition: all ease-in-out 300ms;
+}
